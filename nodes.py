@@ -46,8 +46,54 @@ class DivideNode:
 	def __repr__(self):
 		return f"[{self.node_a}/{self.node_b}]"
 
+@dataclass
+class PowerNode:
+	node_a: any
+	node_b: any
 
-# Uniary symbols
+	def __repr__(self):
+		return f"[{self.node_b}^{self.node_b}]"
+
+
+@dataclass
+class ModouleClass:
+	node_a: any
+	node_b: any
+
+	def __repr__(self):
+		return f"[{self.node_b}%{self.node_b}]"
+
+@dataclass
+class AverageClass:
+	node_a: any
+	node_b: any
+
+	def __repr__(self):
+		return f"[{self.node_b}@{self.node_b}]"
+
+
+
+@dataclass
+class MaximumClass:
+	node_a: any
+	node_b: any
+
+	def __repr__(self):
+		return f"[{self.node_b}${self.node_b}]"
+
+
+@dataclass
+class MinimumClass:
+	node_a: any
+	node_b: any
+
+	def __repr__(self):
+		return f"[{self.node_b}&{self.node_b}]"
+
+
+
+# Uniary symbols #
+
 @dataclass
 class PlusNode:
 	node: any
