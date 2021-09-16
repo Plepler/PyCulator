@@ -43,7 +43,7 @@ class Interpeter:
 	def visit_PowerNode(self, node) -> Number:
 		return Number(pow(self.visit(node.node_a).value, self.visit(node.node_b).value))
 
-	def visit_ModouleNode(self, node) -> Number:
+	def visit_ModuleNode(self, node) -> Number:
 		return Number(self.visit(node.node_a).value % self.visit(node.node_b).value)
 
 	def visit_AverageNode(self, node) -> Number:
