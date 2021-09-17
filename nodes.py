@@ -56,7 +56,7 @@ class PowerNode:
 
 
 @dataclass
-class ModouleClass:
+class ModuleNode:
 	node_a: any
 	node_b: any
 
@@ -64,7 +64,7 @@ class ModouleClass:
 		return f"[{self.node_b}%{self.node_b}]"
 
 @dataclass
-class AverageClass:
+class AverageNode:
 	node_a: any
 	node_b: any
 
@@ -74,7 +74,7 @@ class AverageClass:
 
 
 @dataclass
-class MaximumClass:
+class MaximumNode:
 	node_a: any
 	node_b: any
 
@@ -83,7 +83,7 @@ class MaximumClass:
 
 
 @dataclass
-class MinimumClass:
+class MinimumNode:
 	node_a: any
 	node_b: any
 

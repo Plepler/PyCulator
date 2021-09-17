@@ -56,6 +56,11 @@ class Interpeter:
 		return Number(min(self.visit(node.node_a).value, self.visit(node.node_b).value) )
 
 	def visit_NegateNode(self, node) -> Number:
-		return Number(~self.visit(node.node).value)
+		
+		if not self.visit(node.node).value.is_integer():
+			raise Exception("Runtime Math error (Negate)")
+
+
+		return Number(~int(self.visit(node.node).value))
 
 	
