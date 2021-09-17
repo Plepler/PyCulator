@@ -118,3 +118,9 @@ class FactorialNode:
 		return f"(!{self.node})"
 
 
+@dataclass
+class NegateNode:
+	node: any
+
+	def __repr__(self):
+		return f"(~{self.node})"

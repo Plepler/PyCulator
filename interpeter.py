@@ -55,4 +55,7 @@ class Interpeter:
 	def visit_MinimumNode(self, node) -> Number:
 		return Number(min(self.visit(node.node_a).value, self.visit(node.node_b).value) )
 
+	def visit_NegateNode(self, node) -> Number:
+		return Number(~self.visit(node.node).value)
+
 	

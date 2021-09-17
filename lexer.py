@@ -22,9 +22,12 @@ class Lexer:
 			elif self.current_char == '+':
 				self.advance()
 				yield Token(TokenType.PLUS)
-			elif self.current_char in '-~':
+			elif self.current_char == '-':
 				self.advance()
 				yield Token(TokenType.MINUS)
+			elif self.current_char == '~':
+				self.advance()
+				yield Token(TokenType.NEGATE)
 			elif self.current_char == '*':
 				self.advance()
 				yield Token(TokenType.MULTIPLY)
